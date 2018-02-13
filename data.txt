@@ -2,21 +2,21 @@
     {
         "nombre": "Zeus",
         "puesto": "dios de los dioses",
-        "ima":""
+        "ima":"zeus.png"
     },
     {
         "nombre": "Poseidón",
         "puesto": "dios de los mares",
-        "ima":""
+        "ima":"hermes.png"
     },
     {
         "nombre": "Hades",
         "puesto": "dios del inframundo",
-        "ima":""
+        "ima":"hestia.png"
     },
 	{
         "nombre": "Afrodita",
         "puesto": "diosa del amor",
-        "ima":""
+        "ima":"hera.png"
     }
 ]
