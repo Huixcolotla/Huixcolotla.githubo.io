@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Zeus",
+        "puesto": "dios de los dioses"
+    },
+    {
+        "nombre": "Poseidón",
+        "puesto": "dios de los mares"
+    },
+    {
+        "nombre": "Hades",
+        "puesto": "dios del inframundo"
+    },
+	{
+        "nombre": "Afrodita",
+        "puesto": "diosa del amor"
+    }
+]
