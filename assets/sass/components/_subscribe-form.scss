@@ -1,0 +1,77 @@
+//---------------------------
+//
+// Subscribe Form
+//
+//---------------------------
+
+.subscribe-form {
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-group { flex: 8; }
+
+  .button { flex: 2; }
+
+  &--boxed {
+    position: relative;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      content: '';
+      background-repeat: repeat-y;
+      background-image: url(/assets/images/border-outline-vertical.png);
+      width: 4px;
+      z-index: 100;
+    }
+
+    &:before { left: 0; }
+    &:after { right: 0; }
+  }
+
+  &__box {
+    position: relative;
+    padding: $line-height__base;
+
+    input { margin-bottom: 0; }
+
+    button {
+      .icon {
+        margin-left: - quarter($line-height__base);
+
+        @media #{$large-up} {
+          margin-left: 0;
+        }
+      }
+
+      &:hover .icon {
+        margin-left: - half($line-height__base);
+        padding-left: half($line-height__base);
+        width: double($line-height__base);
+        transition: margin-left 0.15s ease, padding-left 0.15s ease 0.15s, width 0.15s ease;
+      }
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-repeat: no-repeat;
+      background-image: url(/assets/images/border-outline-horizintal.png);
+    }
+
+    &:before { top: 0; }
+    &:after { bottom: 0; }
+
+    @media #{$large-up} {
+      padding: double($line-height__base);
+    }
+  }
+}

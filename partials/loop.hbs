@@ -1,0 +1,19 @@
+{{! This is the post loop - each post will be output using this markup }}
+
+{{#foreach posts}}
+
+  {{! If we are in home page, show the loop without the first post }}
+
+  {{#is "home"}}
+    {{^if @first}}
+      {{> post-card}}
+    {{/if}}
+  {{/is}}
+
+  {{! If we are not in home page, show the normal }}
+
+  {{^is "home"}}
+    {{> post-card}}
+  {{/is}}
+
+{{/foreach}}

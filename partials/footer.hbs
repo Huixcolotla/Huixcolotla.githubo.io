@@ -1,0 +1,87 @@
+<footer class="site-footer">
+  <div class="row">
+
+    <div class="large-12 column">
+      <div class="site-footer__top">
+        <div class="row">
+
+          <div class="site-footer__section column medium-4 large-4">
+            <a href="{{@blog.url}}">{{@blog.title}}</a>
+            <div class="site-footer__description font-small">{{@blog.description}}</div>
+          </div>
+
+          <div class="site-footer__section column medium-4 large-2">
+            <nav>
+              <ul class="list-bare site-footer__nav">
+                {{navigation}}
+                <li><a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="site-footer__section column medium-4 large-2">
+            <ul class="site-footer__nav social-icons list-bare">
+              {{# if @blog.twitter}}
+                <li>
+                  <a href="{{twitter_url}}" target="_blank">
+                    <span data-icon="ei-sc-twitter" data-size="s"></span>
+                    Twitter
+                  </a>
+                </li>
+              {{/if}}
+              {{# if @blog.facebook}}
+                <li>
+                  <a href="{{facebook_url}}" target="_blank">
+                    <span data-icon="ei-sc-facebook" data-size="s"></span>
+                    Facebook
+                  </a>
+                </li>
+              {{/if}}
+              <li>
+                <a href="https://instagram.com/{{! Add Instagram handle }}" target="_blank">
+                  <span data-icon="ei-sc-instagram" data-size="s"></span>
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://pinterest.com/{{! Add Pinterest handle }}" target="_blank" class="block">
+                  <span data-icon="ei-sc-pinterest" data-size="s"></span>
+                  Pinterest
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="site-footer__section column medium-12 large-4">
+            <p class="font-medium">Newsletter</p>
+            <div class="subscribe-form">
+              {{subscribe_form placeholder="Your email address" button_class="button"}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="column large-12">
+      <div class="site-footer__bottom">
+        <div class="row">
+
+          <div class="column medium-6 large-6">
+            <div class="font-tiny">
+              &copy; {{date format="YYYY"}} {{@blog.title}}
+            </div>
+          </div>
+
+          <div class="column medium-6 large-6 poweredby">
+            <div class="font-tiny">
+              Powered by <a href="https://ghost.org">Ghost</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>

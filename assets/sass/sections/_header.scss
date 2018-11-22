@@ -1,0 +1,51 @@
+//---------------------------
+// Header
+//---------------------------
+
+$header-border-color: rgba(255, 255, 255, 0.6);
+
+.logo {
+  margin-bottom: 0;
+  display: initial;
+  vertical-align: middle;
+
+  a {
+    transition: $base-transition-speed;
+    text-decoration: none;
+    color: #fff;
+
+    .clean & {
+      color: $color__type;
+
+      &:hover { color: $color__type--hover; }
+    }
+  }
+
+  &__img {
+    max-height: $line-height__medium;
+    vertical-align: middle;
+  }
+}
+
+.site-header {
+  position: absolute;
+
+  .clean & { position: static; }
+
+  width: 100%;
+  z-index: 200;
+  line-height: $line-height__medium;
+
+  &__container {
+    padding: half($line-height__medium) 0;
+    border-bottom: 1px solid $header-border-color;
+
+    @media #{$large-up} {
+      padding: half($line-height__base) 0;
+    }
+
+    .clean & {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}

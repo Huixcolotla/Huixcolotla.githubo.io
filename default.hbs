@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{{ meta_title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {{> compiled/inline-css }}
+
+  {{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+
+{{! We need to add a 'clean' class for paged other than tag and author to make the header more cleaner,
+because there will no header image in the paged (archive page in this case) }}
+
+<body class="{{body_class}} {{^is "tag"}}{{^is "author"}}{{#is "paged"}} clean {{/is}}{{/is}}{{/is}}">
+
+  <div class="off-canvas-container">
+    {{> header}}
+
+    {{{body}}}
+
+    {{> footer}}
+
+    {{ghost_foot}}
+  </div>
+
+  {{! JavaScript }}
+  <script type="text/javascript" src="{{asset "js/app.min.js"}}"></script>
+</body>
+</html>
